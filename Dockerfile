@@ -27,4 +27,3 @@ ONBUILD RUN apt-get purge -y --auto-remove \
 
 ONBUILD RUN rm /tmp/playbook.yml
 ONBUILD RUN rm -r /tmp/roles
-ONBUILD RUN rm /etc/ansible/hosts
