@@ -15,7 +15,7 @@ RUN echo '[local]\nlocalhost\n' > /etc/ansible/hosts
 
 # Copy our ansible files
 ONBUILD COPY playbook.yml /tmp/playbook.yml
-ONBUILD COPY roles /tmp/roles/
+ONBUILD COPY roles /etc/ansible/roles/
 
 # Provision the image
 ONBUILD RUN ansible-playbook --connection=local /tmp/playbook.yml
@@ -26,4 +26,4 @@ ONBUILD RUN apt-get purge -y --auto-remove \
 	software-properties-common
 
 ONBUILD RUN rm /tmp/playbook.yml
-ONBUILD RUN rm -r /tmp/roles
+ONBUILD RUN rm -r /etc/ansible/roles
