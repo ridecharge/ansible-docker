@@ -1,5 +1,5 @@
 # Latest Ubuntu LTS
-FROM ubuntu:14.04
+FROM ubuntu:14.04.2
 
 # Install Ansible
 RUN apt-get update && \
