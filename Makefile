@@ -1,4 +1,4 @@
-DOCKER_REPO?=registry.gocurb.internal:80/ansible
+DOCKER_REPO?=registry.gocurb.internal:80
 CONTAINER=$(DOCKER_REPO)/ansible
 
 all: build push clean
