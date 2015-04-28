@@ -19,11 +19,3 @@ ONBUILD COPY roles /etc/ansible/roles/
 
 # Provision the image
 ONBUILD RUN ansible-playbook --connection=local /tmp/playbook.yml
-
-# Cleanup
-ONBUILD RUN apt-get purge -y --auto-remove \
-	ansible \
-	software-properties-common
-
-ONBUILD RUN rm /tmp/playbook.yml
-ONBUILD RUN rm -r /etc/ansible/roles
