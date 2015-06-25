@@ -8,7 +8,7 @@ RUN apt-get update && \
     software-properties-common && \
     apt-add-repository ppa:ansible/ansible && \
     apt-get update && \
-    apt-get install -y ansible
+    apt-get install -y ansible python-apt
 
 # Make sure only ansible host is localhost
 RUN echo '[local]\nlocalhost\n' > /etc/ansible/hosts
